@@ -1,6 +1,6 @@
 CONFIG_MODULE_SIG=n
 obj-m += hello.o
-hello-y := src/hello_world.o
+hello-y := src/module_main.o
 
 ccflags-y := -I$(src)/../include
 ccflags-y += -I$(src)/include
