@@ -1,8 +1,8 @@
 #ifndef MODULE_COMMON_H
 #define MODULE_COMMON_H
 
-#define INFO_PRINT(fmt, args...) printk(KERN_INFO DRIVER_NAME ": " fmt "\n", ## args)
-#define ERROR_PRINT(fmt, args...) printk(KERN_ERR DRIVER_NAME ": " fmt "\n", ## args)
+#define INFO_PRINT(fmt, args...) printk(KERN_INFO DRIVER_NAME ": %s(): " fmt "\n", __func__, ## args)
+#define ERROR_PRINT(fmt, args...) printk(KERN_ERR DRIVER_NAME ": %s(): " fmt "\n", __func__, ## args)
 
 #define CHECK_ERROR(x, y)                                   \
     if ((x))                                                \
